@@ -8,8 +8,7 @@ namespace Task1
 {
     public interface IArrayCompare
     {
-        bool Compare(int[] a,int[] b);
-        bool IsPositive { get; set; }
+        int Compare(int[] a,int[] b);
     }
     public static class JaggedArraySort
     {
@@ -20,7 +19,7 @@ namespace Task1
             {
                 for (int j = 0; j < i; j++)
                 {
-                    if (comparator.Compare(array[j], array[j + 1]))
+                    if (comparator.Compare(array[j], array[j + 1])==1)
                     {
                           SwapArray(ref array[j], ref array[j+1]);
                     }
